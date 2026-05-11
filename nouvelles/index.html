@@ -1,0 +1,31 @@
+---
+layout: default
+title: Nouvelles
+lang: fr
+permalink: /nouvelles/
+---
+<section class="news-listing">
+  <div class="news-listing-header">
+    <div class="section-label">Toutes les nouvelles</div>
+    <h1>Du terrain</h1>
+    <p>Articles, rapports de terrain et alertes de conservation du bassin versant de la Restigouche.</p>
+  </div>
+
+  <div class="news-listing-grid">
+    {% for post in site.posts %}
+    <article class="news-card">
+      <div class="news-img-placeholder">
+        <svg width="36" height="36" viewBox="0 0 56 56" fill="none"><path d="M8 36 Q16 22 24 28 Q32 34 40 22 Q48 10 52 18" stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="28" cy="20" rx="9" ry="5" stroke="rgba(255,255,255,0.25)" stroke-width="2" fill="none"/></svg>
+      </div>
+      <div class="news-body">
+        <div class="news-tag">{{ post.categorie | default: "Nouvelles" }}</div>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        <div class="news-date">{{ post.date | date: "%d %B %Y" }}</div>
+      </div>
+    </article>
+    {% else %}
+    <p class="no-posts">Aucune nouvelle publiée pour l'instant.</p>
+    {% endfor %}
+  </div>
+</section>

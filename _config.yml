@@ -1,0 +1,30 @@
+title: "CGBVRR"
+title_fr: "Conseil de gestion du bassin versant de la rivière Restigouche"
+title_en: "Restigouche River Watershed Management Council"
+description_fr: "Conservation interprovinciale du saumon atlantique — N.-B. & Québec"
+description_en: "Interprovincial Atlantic salmon conservation — NB & Quebec"
+baseurl: "/cgbvrr"
+url: "https://axiomorphe.ca"
+lang: fr
+
+# Build
+markdown: kramdown
+permalink: /nouvelles/:year/:slug/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# RSS feed config (jekyll-feed)
+feed:
+  path: feed.xml
+  posts_limit: 20
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules

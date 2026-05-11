@@ -1,0 +1,65 @@
+---
+layout: default
+---
+<article class="post-article">
+  <header class="post-header">
+    <div class="post-header-inner">
+      <div class="section-label">
+        {% if page.categorie %}{{ page.categorie }}{% else %}Nouvelles{% endif %}
+      </div>
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
+      <div class="post-meta">
+        <span class="post-date">{{ page.date | date: "%d %B %Y" }}</span>
+        {% if page.auteur %}<span class="post-author">— {{ page.auteur }}</span>{% endif %}
+      </div>
+    </div>
+  </header>
+
+  <div class="post-body">
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <aside class="post-sidebar">
+      <div class="sidebar-card">
+        <h4>Projet lié</h4>
+        {% if page.projet %}
+          <p>{{ page.projet }}</p>
+        {% else %}
+          <p>—</p>
+        {% endif %}
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Partager</h4>
+        <div class="share-links">
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank" rel="noopener">Facebook</a>
+          <a href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url }}">Courriel</a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Flux RSS</h4>
+        <p><a href="/feed.xml">S'abonner aux nouvelles</a></p>
+      </div>
+    </aside>
+  </div>
+
+  <nav class="post-nav">
+    <div class="post-nav-inner">
+      {% if page.previous.url %}
+      <a href="{{ page.previous.url }}" class="post-nav-link prev">
+        <span class="nav-label">← Article précédent</span>
+        <span class="nav-title">{{ page.previous.title }}</span>
+      </a>
+      {% endif %}
+      {% if page.next.url %}
+      <a href="{{ page.next.url }}" class="post-nav-link next">
+        <span class="nav-label">Article suivant →</span>
+        <span class="nav-title">{{ page.next.title }}</span>
+      </a>
+      {% endif %}
+    </div>
+  </nav>
+</article>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nouvelles — RRWMC / CGBVRR</title>
+  <meta name="description" content="Restigouche River Watershed Management Council — Atlantic salmon conservation NB &amp; Quebec">
+  <link rel="alternate" type="application/rss+xml" title="RRWMC — News" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- Hide all data-lang elements before JS runs to prevent flash -->
+  <style>
+  [data-lang="en"], [data-lang="fr"] { display: none; }
+</style>
+</head>
+<body>
+
+<!-- PROTOTYPE BANNER -->
+<div class="prototype-banner">
+  ⚠ &nbsp; PROTOTYPE / MAQUETTE — Not the official RRWMC website — Demo purposes only &nbsp; ⚠
+</div>
+
+<nav class="site-nav" id="site-nav">
+  <div class="nav-logo">
+    <a href="/">
+      <span class="nav-name-main" data-lang="en">Restigouche River Watershed Management Council</span>
+      <span class="nav-name-main" data-lang="fr">Conseil de gestion du bassin versant de la rivière Restigouche</span>
+      <span class="nav-name-sub" data-lang="en">Conseil de gestion du bassin versant de la rivière Restigouche</span>
+      <span class="nav-name-sub" data-lang="fr">Restigouche River Watershed Management Council</span>
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/#mission" data-lang="en">Mission</a><a href="/#mission" data-lang="fr">Mission</a></li>
+    <li><a href="/#carte" data-lang="en">Watershed</a><a href="/#carte" data-lang="fr">Bassin versant</a></li>
+    <li><a href="/nouvelles/" data-lang="en">News</a><a href="/nouvelles/" data-lang="fr">Nouvelles</a></li>
+    <li><a href="/#projets" data-lang="en">Projects</a><a href="/#projets" data-lang="fr">Projets</a></li>
+    <li><a href="/#partenaires" data-lang="en">Partners</a><a href="/#partenaires" data-lang="fr">Partenaires</a></li>
+    <li><a href="/#contact" data-lang="en">Contact</a><a href="/#contact" data-lang="fr">Contact</a></li>
+    <li><button class="lang-toggle" id="lang-btn" onclick="toggleLang()">FR</button></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<section class="news-listing">
+  <div class="news-listing-header">
+    <div class="section-label">Toutes les nouvelles</div>
+    <h1>Du terrain</h1>
+    <p>Articles, rapports de terrain et alertes de conservation du bassin versant de la Restigouche.</p>
+  </div>
+
+  <div class="news-listing-grid">
+    
+    <article class="news-card">
+      <div class="news-img-placeholder">
+        <svg width="36" height="36" viewBox="0 0 56 56" fill="none"><path d="M8 36 Q16 22 24 28 Q32 34 40 22 Q48 10 52 18" stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="28" cy="20" rx="9" ry="5" stroke="rgba(255,255,255,0.25)" stroke-width="2" fill="none"/></svg>
+      </div>
+      <div class="news-body">
+        <div class="news-tag">Alerte conservation</div>
+        <h2><a href="/nouvelles/2026/comptages-saumons-2025/">Comptages de saumons 2025 : deuxième année sous le seuil de conservation</a></h2>
+        <p>Pour la deuxième année consécutive, les populations de saumon atlantique dans le bassin versant de la Restigouche demeurent sous le seuil de conservation. Vo...</p>
+        <div class="news-date">01 May 2026</div>
+      </div>
+    </article>
+    
+    <article class="news-card">
+      <div class="news-img-placeholder">
+        <svg width="36" height="36" viewBox="0 0 56 56" fill="none"><path d="M8 36 Q16 22 24 28 Q32 34 40 22 Q48 10 52 18" stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="28" cy="20" rx="9" ry="5" stroke="rgba(255,255,255,0.25)" stroke-width="2" fill="none"/></svg>
+      </div>
+      <div class="news-body">
+        <div class="news-tag">Protection</div>
+        <h2><a href="/nouvelles/2026/cameras-anti-braconnage/">Caméras anti-braconnage déployées aux bassins prioritaires</a></h2>
+        <p>De nouveaux équipements de surveillance ont été installés à plusieurs bassins à saumon prioritaires du bassin versant dans le cadre de notre programme de pro...</p>
+        <div class="news-date">15 April 2026</div>
+      </div>
+    </article>
+    
+  </div>
+</section>
+
+
+<div class="newsletter-bar">
+  <div class="newsletter-text">
+    <h3>Restez informé. La rivière a besoin de témoins.</h3>
+    <p>Nouvelles du terrain, projets en cours et alertes de conservation.</p>
+  </div>
+  <form class="newsletter-form" action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST">
+    <input type="email" name="email" placeholder="votre@courriel.com" required>
+    <button type="submit">S'abonner</button>
+  </form>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-name-fr">Conseil de gestion du bassin versant de la rivière Restigouche</div>
+      <div class="footer-name-en">Restigouche River Watershed Management Council</div>
+      <p>Protection du bassin versant de la Restigouche au Nouveau-Brunswick et au Québec depuis 1992. Organisme sans but lucratif interprovincial dédié à la conservation du saumon atlantique.</p>
+      <a href="/feed.xml" class="rss-link">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="9" width="4" height="4" rx="1" fill="#f5a623"/><path d="M1 6c3.866 0 7 3.134 7 7" stroke="#f5a623" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M1 2C8.18 2 13 6.82 13 14" stroke="#f5a623" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+        Flux RSS
+      </a>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="/#mission">Mission</a></li>
+        <li><a href="/#carte">Bassin versant</a></li>
+        <li><a href="/nouvelles/">Nouvelles</a></li>
+        <li><a href="/#projets">Projets</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Organisation</h5>
+      <ul>
+        <li><a href="/#partenaires">Partenaires</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/#contact">Adhésion</a></li>
+        <li><a href="/en/">English</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Ressources</h5>
+      <ul>
+        <li><a href="#">Rapports annuels</a></li>
+        <li><a href="#">Données scientifiques</a></li>
+        <li><a href="https://www.glf.dfo-mpo.gc.ca/Gulf/Habitat/NB-Aquatic-Data-Warehouse" target="_blank" rel="noopener">Données aquatiques NB</a></li>
+        <li><a href="https://www.asf.ca" target="_blank" rel="noopener">Fédération du saumon atlantique</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 CGBVRR — Tous droits réservés — Campbellton, N.-B.</span>
+  </div>
+</footer>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

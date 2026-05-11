@@ -1,0 +1,32 @@
+# Éditer ce fichier pour mettre à jour les projets sur le site
+# Chaque projet apparaît automatiquement sur la page d'accueil
+
+- titre: "WATERSHADE"
+  annee: "2023 — EN COURS"
+  statut: "Actif"
+  description: "Cartographie des refuges thermiques sur plus de 400 km de rivière où le saumon se réfugie lors des épisodes de chaleur. Combine l'imagerie thermique aérienne, les relevés de terrain et la modélisation hydrologique pour prioriser les sites d'intervention."
+
+- titre: "Inventaire de migration des smolts"
+  annee: "2021 — EN COURS"
+  statut: "Actif"
+  description: "Relevés annuels par électropêche et télémétrie PIT pour suivre la migration des juvéniles de saumon et les taux de survie dans six sous-bassins."
+
+- titre: "Réseau de surveillance anti-braconnage"
+  annee: "2025 — EN COURS"
+  statut: "Actif"
+  description: "Déploiement de caméras à distance aux bassins prioritaires en coordination avec la GRC et la Sûreté du Québec, pour réduire la pression de prélèvement illégal pendant la fraie."
+
+- titre: "Relevé aérien LIDAR et thermique"
+  annee: "2018 — COMPLÉTÉ"
+  statut: "Complété"
+  description: "15 000 photographies aériennes et cartographie LIDAR complète de plus de 400 km de rivières — faisant de la Restigouche l'un des systèmes fluviaux à saumon les mieux documentés en Amérique du Nord."
+
+- titre: "Programme de réduction des sédiments"
+  annee: "2024 — EN COURS"
+  statut: "Actif"
+  description: "Collaboration avec les opérateurs forestiers et les municipalités pour réduire l'érosion dans les zones de frai critiques du saumon."
+
+- titre: "Réseau de surveillance de la qualité de l'eau"
+  annee: "2024 — EN COURS"
+  statut: "Actif"
+  description: "Enregistrement continu de la température et de la qualité de l'eau dans 18 stations du bassin versant, alimentant l'entrepôt de données aquatiques du MPO."
