@@ -11,7 +11,7 @@ function detectLang() {
 function applyLang(lang) {
   // Show matching lang, hide other
   document.querySelectorAll('[data-lang]').forEach(el => {
-    el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+    el.style.display = el.getAttribute('data-lang') === lang ? 'inline' : 'none';
   });
   // Update button label
   const btn = document.getElementById('lang-btn');
