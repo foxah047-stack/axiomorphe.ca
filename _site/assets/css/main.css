@@ -963,7 +963,10 @@
     section { padding: 60px 24px; }
     nav { padding: 0 20px; }
     .nav-links { display: none; }
-    .hero { padding: 60px 24px; }
+    .hero {
+  padding: 120px 24px 60px;
+  align-items: flex-start;
+}
     .mission-grid, .contact-section { grid-template-columns: 1fr; gap: 40px; }
     .news-grid { grid-template-columns: 1fr; }
     .news-card.featured { grid-row: span 1; }

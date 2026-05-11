@@ -37,7 +37,8 @@ function toggleLang() {
 document.addEventListener('DOMContentLoaded', function() {
 
   // Apply detected/saved language immediately
-  applyLang(detectLang());
+  const savedLang = localStorage.getItem('cgbvrr-lang');
+  applyLang(savedLang || detectLang());
 
   // Hamburger menu
   const hamburger = document.getElementById('nav-hamburger');
