@@ -10,14 +10,12 @@ function detectLang() {
 
 function applyLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(el => {
-    if (el.getAttribute('data-lang') === lang) {
-      el.style.display = el.closest('h1') ? 'block' : 'inline';
-    } else {
-      el.style.display = 'none';
-    }
+    el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
   });
+
   const btn = document.getElementById('lang-btn');
   if (btn) btn.textContent = lang === 'en' ? 'FR' : 'EN';
+
   localStorage.setItem('cgbvrr-lang', lang);
 }
 
