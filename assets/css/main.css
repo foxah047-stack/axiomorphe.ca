@@ -14,6 +14,18 @@
     --paper:       #faf8f2;
   }
 
+  html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
   * { margin:0; padding:0; box-sizing:border-box; }
 
   html { scroll-behavior: smooth; }
