@@ -10,7 +10,16 @@ function detectLang() {
 
 function applyLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(el => {
-    el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+    if (el.getAttribute('data-lang') !== lang) {
+      el.style.display = 'none';
+      return;
+    }
+
+    if (el.tagName === 'SPAN') {
+      el.style.display = 'inline';
+    } else {
+      el.style.display = 'block';
+    }
   });
 
   const btn = document.getElementById('lang-btn');

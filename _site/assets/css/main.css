@@ -145,10 +145,11 @@
   }
 
   .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 780px;
-  }
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  min-height: 500px;
+}
 
   .hero-eyebrow {
     font-family: 'DM Mono', monospace;
