@@ -1075,6 +1075,6 @@ button.lang-toggle {
 }
 button.lang-toggle:hover { background: var(--river-light); }
 
-h1 span[data-lang] {
+h1 span[data-lang][style*="inline"] {
   display: block !important;
 }
