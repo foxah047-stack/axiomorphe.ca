@@ -1074,3 +1074,7 @@ button.lang-toggle {
   transition: background 0.2s;
 }
 button.lang-toggle:hover { background: var(--river-light); }
+
+h1 span[data-lang] {
+  display: block;
+}
