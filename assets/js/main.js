@@ -9,14 +9,15 @@ function detectLang() {
 }
 
 function applyLang(lang) {
-  // Show matching lang, hide other
   document.querySelectorAll('[data-lang]').forEach(el => {
-    el.style.display = el.getAttribute('data-lang') === lang ? 'inline' : 'none';
+    if (el.getAttribute('data-lang') === lang) {
+      el.style.display = el.closest('h1') ? 'block' : 'inline';
+    } else {
+      el.style.display = 'none';
+    }
   });
-  // Update button label
   const btn = document.getElementById('lang-btn');
   if (btn) btn.textContent = lang === 'en' ? 'FR' : 'EN';
-  // Save preference
   localStorage.setItem('cgbvrr-lang', lang);
 }
 
