@@ -108,14 +108,14 @@
 
   /* ── HERO ── */
   .hero {
-    position: relative;
-    min-height: 92vh;
-    display: flex;
-    align-items: flex-end;
-    padding: 80px 60px;
-    overflow: hidden;
-    background: var(--charcoal);
-  }
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-start;
+  padding: 150px 60px 80px;
+  overflow: hidden;
+  background: var(--charcoal);
+}
 
   .hero-bg {
   position: absolute;
@@ -148,7 +148,6 @@
   position: relative;
   z-index: 2;
   max-width: 780px;
-  min-height: 500px;
 }
 
   .hero-eyebrow {
